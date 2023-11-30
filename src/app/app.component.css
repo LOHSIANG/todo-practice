@@ -1,6 +1,18 @@
-p{
-    font-family: Lato;
-    background: purple;
-    color: white;
-    padding: 20px;
+.app {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    padding: 30px;
+    transform: translate(-50%, -50%);
+    background: rgba(83, 83, 83, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
