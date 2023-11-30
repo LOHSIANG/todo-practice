@@ -1,0 +1,20 @@
+<section class="todo-form">
+    <input [(ngModel)]="todoItem" name="todoItem" type="text" placeholder="Add your todo item">
+    <button (click)="addItem()">Add</button>
+  
+  <ul class="todo-list">
+    <li *ngFor="let item of todoItems; let i = index">
+      {{ item }}
+      <button (click)="openUpdateForm(i, item)">Update</button>
+      <button (click)="deleteItem(i)">Delete</button>
+    </li>
+  </ul>
+  
+  <div *ngIf="isUpdateFormOpen">
+    <form>
+      <input [(ngModel)]="updateText" type="text" placeholder="Update your todo item">
+      <button (click)="updateItem()">Save</button>
+      <button (click)="closeUpdateForm()">Cancel</button>
+    </form>
+  </div>
+</section>
