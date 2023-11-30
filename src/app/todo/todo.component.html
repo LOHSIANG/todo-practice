@@ -1,11 +1,12 @@
-<section class="todo-form">
-    <input [(ngModel)]="todoItem" name="todoItem" type="text" placeholder="Add your todo item">
+<section>
+    <input [(ngModel)]="todoItem" type="text" placeholder="Add your todo item">
     <button (click)="addItem()">Add</button>
+</section>
   
   <ul class="todo-list">
     <li *ngFor="let item of todoItems; let i = index">
       {{ item }}
-      <button (click)="openUpdateForm(i, item)">Update</button>
+      <button (click)="openUpdateForm(i)">Update</button>
       <button (click)="deleteItem(i)">Delete</button>
     </li>
   </ul>
@@ -17,4 +18,3 @@
       <button (click)="closeUpdateForm()">Cancel</button>
     </form>
   </div>
-</section>

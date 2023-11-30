@@ -25,10 +25,10 @@ export class TodoComponent implements OnInit {
     }
   }
 
-  openUpdateForm(index: number, text: string) {
+  openUpdateForm(index: number) {
     this.isUpdateFormOpen = true;
     this.updateIndex = index;
-    this.updateText = text;
+    this.updateText = this.todoItems[index];
   }
 
   closeUpdateForm() {
@@ -43,7 +43,6 @@ export class TodoComponent implements OnInit {
       this.closeUpdateForm();
     }
   }
-  
   
   deleteItem(index: number) {
     this.todoItems.splice(index, 1);
