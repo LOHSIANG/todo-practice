@@ -13,7 +13,7 @@ export class TodoComponent implements OnInit {
   
   isUpdateOpen: boolean = false;
   updateIndex: number = -1;
-  updateText: string = '';
+  // updateText: string = '';
 
   ngOnInit(): void {
   }
@@ -28,19 +28,19 @@ export class TodoComponent implements OnInit {
   openUpdateForm(index: number) {
     this.isUpdateOpen = true;
     this.updateIndex = index;
-    this.updateText = this.todoItems[index];
+    this.todoItem = this.todoItems[index];
   }
 
-  closeUpdateForm() {
+  cancelUpdate() {
     this.isUpdateOpen = false;
-    this.updateIndex = -1;
-    this.updateText = '';
+    this.todoItem = '';
   }
 
   updateItem() {
-    if (this.updateText.trim() !== '') {
-      this.todoItems[this.updateIndex] = this.updateText;
-      this.closeUpdateForm();
+    if (this.todoItem.trim() !== '') {
+      this.todoItems[this.updateIndex] = this.todoItem;
+      this.todoItem = '';
+      this.isUpdateOpen = false;
     }
   }
   

@@ -1,6 +1,8 @@
 <section>
     <input [(ngModel)]="todoItem" type="text" placeholder="Add your todo item">
-    <button (click)="addItem()">Add</button>
+    <button *ngIf="!isUpdateOpen" (click)="addItem()">Add</button>
+    <button *ngIf="isUpdateOpen" (click)="updateItem()">Update</button>
+    <button *ngIf="isUpdateOpen" (click)="cancelUpdate()">Cancel</button>
 </section>
   
   <ul class="todo-list">
@@ -11,8 +13,8 @@
     </li>
   </ul>
   
-  <div *ngIf="isUpdateOpen">
+  <!-- <div *ngIf="isUpdateOpen">
     <input [(ngModel)]="updateText" type="text" placeholder="Update your todo item">
     <button (click)="updateItem()">Save</button>
     <button (click)="closeUpdateForm()">Cancel</button>
-  </div>
+  </div> -->
