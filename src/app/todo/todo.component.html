@@ -11,10 +11,8 @@
     </li>
   </ul>
   
-  <div *ngIf="isUpdateFormOpen">
-    <form>
-      <input [(ngModel)]="updateText" type="text" placeholder="Update your todo item">
-      <button (click)="updateItem()">Save</button>
-      <button (click)="closeUpdateForm()">Cancel</button>
-    </form>
+  <div *ngIf="isUpdateOpen">
+    <input [(ngModel)]="updateText" type="text" placeholder="Update your todo item">
+    <button (click)="updateItem()">Save</button>
+    <button (click)="closeUpdateForm()">Cancel</button>
   </div>

@@ -11,7 +11,7 @@ export class TodoComponent implements OnInit {
   todoItem: string = '';
   todoItems: Array<string> = [];
   
-  isUpdateFormOpen: boolean = false;
+  isUpdateOpen: boolean = false;
   updateIndex: number = -1;
   updateText: string = '';
 
@@ -26,13 +26,13 @@ export class TodoComponent implements OnInit {
   }
 
   openUpdateForm(index: number) {
-    this.isUpdateFormOpen = true;
+    this.isUpdateOpen = true;
     this.updateIndex = index;
     this.updateText = this.todoItems[index];
   }
 
   closeUpdateForm() {
-    this.isUpdateFormOpen = false;
+    this.isUpdateOpen = false;
     this.updateIndex = -1;
     this.updateText = '';
   }

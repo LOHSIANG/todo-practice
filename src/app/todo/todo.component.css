@@ -2,3 +2,9 @@ input{
     font-size: 20px;
 }
 
+ul {
+    font-family: Lato;
+    background: purple;
+    color: white;
+    padding: 20px;
+}
